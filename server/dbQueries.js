@@ -19,8 +19,10 @@ topTenTwitterUsersLink();
 function topTenTwitterUsersLink() {
     tweets.aggregate(
         [{"$match":{"text": {"$regex": "@"} }},
-            {"$group": {"_id":1, "count": {"$sum" : 1 }}},
-            { "$limit" : 5 }],
+            //{ "$group": {"_id":"$user", "count":{"$sum":1} }},
+            { "$group": {"_id":"$user", "tweets":{ "$sum":1 } }},
+            { "$sort": {"tweets": -1}},
+            { "$limit" : 10 }],
         function(err,data){
             if(err){console.log(err); return;}
             //console.log("There is '"+data[0].count +"' twitter users unique");

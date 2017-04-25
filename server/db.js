@@ -26,7 +26,6 @@ process.on('SIGINT', function() {
     });
 });
 
-//Date, MatchDay, Result
 var tweets = new mongoose.Schema({
     polarity : {type: Number},
     id: {type: Number, unique: true},
