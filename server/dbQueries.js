@@ -1,4 +1,5 @@
 //mongoimport -d mongo_exercise -c tweets --type csv --file mongodata.1600000.csv --headerline
+
 var db = require("./db");
 var mongoose = require('mongoose');
 var tweets = mongoose.model('Tweets');
@@ -60,7 +61,7 @@ function mostActiveTwitterUsers() {
 
 }
 
-mostGrumpy();
+//mostGrumpy();
 //Make this
 //Most grumpy limit 5
 function mostGrumpy(){
@@ -90,4 +91,17 @@ function mostHappy(){
         });
 }
 
+
+
+module.exports = {
+    countTwitterUsers:countTwitterUsers,
+    topTenTwitterUsersLink: topTenTwitterUsersLink,
+    topFiveMostMentionedUsers: topFiveMostMentionedUsers,
+    mostActiveTwitterUsers: mostActiveTwitterUsers,
+    mostGrumpy: mostGrumpy,
+    mostHappy:mostHappy
+
+}
+
+require('make-runnable');
 

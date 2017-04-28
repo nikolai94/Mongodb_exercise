@@ -10,10 +10,14 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "express": "~4.15.2",
+    "make-runnable": "^1.1.1",
     "mongodb": "^2.2.26",
     "mongoose": "^4.9.6",
     "morgan": "~1.8.1",
     "pug": "~2.0.0-beta11",
     "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "run-func": "^1.0.1"
   }
 }
