@@ -1,12 +1,16 @@
 # Mongodb_exercise
 
+### Install this project
+* npm install
+
 ### Import csv file
 * mongoimport -d mongo_exercise -c tweets --type csv --file mongodata.1600000.csv --headerline
 
 ### Exercise
 
 #### How many Twitter users are in our database?
-There is 659178 twitter users in our database. See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQueries.js#L8)
+There is 659178 twitter users in our database. See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQueries.js#L8) <br />
+Call function from terminal: $node server/dbQueries.js countTwitterUsers
 
 #### Which Twitter users link the most to other Twitter users? 
 
@@ -21,7 +25,8 @@ The most mentioned Twitter users:
 | lizponce        | 11             |
 | bobui           | 11             |
 
-See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQueries.js#L35)
+See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQueries.js#L35) <br />
+Call function from terminal: $node server/dbQueries.js topFiveMostMentionedUsers
 
 #### Who are the most active Twitter users?
 The most active Twitter users:
@@ -39,7 +44,8 @@ The most active Twitter users:
 | Karen230683     | 238            |
 | DarkPiano       | 236            |
 
-See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQueries.js#L51)
+See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQueries.js#L51) <br />
+Call function from terminal: $node server/dbQueries.js mostActiveTwitterUsers
 
 #### Who are the most grumpy and the most happy?
 
@@ -53,7 +59,8 @@ See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQu
 | mcraddictal     | 210            |
 | wowlew          | 210            |
 
-See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQueries.js#L66)
+See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQueries.js#L66) <br />
+Call function from terminal: $node server/dbQueries.js mostGrumpy
 
 ##### Most happy users:
 
@@ -65,7 +72,8 @@ See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQu
 | tsarnick        | 212            |
 | keza34          | 211            |
 
-See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQueries.js#L81)
+See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQueries.js#L81) <br />
+Call function from terminal: $node server/dbQueries.js mostHappy
 
 
 
