@@ -1,10 +1,10 @@
 # Mongodb_exercise
 
 ### Install this project
-* npm install
-
-### Import csv file
-* mongoimport -d mongo_exercise -c tweets --type csv --file mongodata.1600000.csv --headerline
+1. npm install
+1. mongoimport -d mongo_exercise -c tweets --type csv --file mongodata.1600000.csv --headerline
+1. createIndex({user:1})
+1. createIndex({id:1})
 
 ### Exercise
 
