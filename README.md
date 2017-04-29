@@ -1,4 +1,11 @@
-# Mongodb_exercise
+# Mongodb exercise
+
+Group: 
+- Mathias Meldgaard Pedersen
+- Nikolai Hansen
+- Joachim Dittman Jepsen
+- Jonathan Egebak Carlsen
+----------------------------------------------------------
 
 ### Install this project
 1. npm install
@@ -13,20 +20,26 @@ There is 659178 twitter users in our database. See [code](https://github.com/nik
 Call function from terminal: $node server/dbQueries.js countTwitterUsers
 
 #### Which Twitter users link the most to other Twitter users? 
+The users there link the most to other Twitter users:
+
+| User            | LinkCount      |
+| -------------   |:-------------: | 
+| lost_dog        | 549            |
+| tweetpet        | 310            |
+| VioletsCRUK     | 251            |
+| what_bugs_u     | 246            |
+| tsarnick        | 245            |
+| SallytheShizzle | 229            |
+| mcraddictal     | 217            |
+| Karen230683     | 216            |
+| keza34          | 211            |
+| TraceyHewins    | 202            |
+
+See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQueries.js#L21) <br />
+Call function from terminal: $node server/dbQueries.js topTenTwitterUsersLink
 
 #### Who is the most mentioned Twitter users?
-The most mentioned Twitter users:
-
-| User            | MentionedCount |
-| -------------   |:-------------: | 
-| WallTweet       | 34             |
-| Ausadian98      | 14             |
-| SallytheShizzle | 12             |
-| lizponce        | 11             |
-| bobui           | 11             |
-
-See [code](https://github.com/nikolai94/Mongodb_exercise/blob/master/server/dbQueries.js#L35) <br />
-Call function from terminal: $node server/dbQueries.js topFiveMostMentionedUsers
+<b style='color:red'>We do not know how to make this....</b>.
 
 #### Who are the most active Twitter users?
 The most active Twitter users:
