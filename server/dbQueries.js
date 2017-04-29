@@ -16,34 +16,34 @@ function countTwitterUsers() {
 }
 
 
-//MAKE THIS
-//topTenTwitterUsersLink();
+topTenTwitterUsersLink();
 //Which Twitter users link the most to other Twitter users? (Provide the top ten.)
 function topTenTwitterUsersLink() {
     tweets.aggregate(
-            [{"$match":{"text": {"$regex": "@\\w+"} }},
-            { "$unwind" : "$user" },
-            { "$sort": {"tweets": -1}},
-            { "$limit" : 10 }],
+        [{"$match":{"text": {"$regex" : new RegExp(/(@)\w+/)} }},
+            {"$group": {"_id": "$user", "count": {"$sum" : 1 }} },
+            { "$sort": {"count": -1}},
+            { "$limit" : 5 }],
         function(err,data){
             if(err){console.log(err); return;}
             console.log(data);
         });
 }
 
+//MAKE THIS
 //topFiveMostMentionedUsers();
 //Who is are the most mentioned Twitter users? - DONE
 function topFiveMostMentionedUsers() {
-    tweets.aggregate(
-        [{"$match":{"text": {"$regex" : "@\w+"} }},
-        {"$group": {"_id": {"user":"$user", "id":"$id"} }},
-        {"$group": {"_id":"$_id.user", "count":{"$sum":1} }},
-        { "$sort": {"count": -1}},
-        { "$limit" : 5 }],
-        function(err,data){
-            if(err){console.log(err); return;}
-            console.log(data);
-        });
+    /*tweets.aggregate(
+     [{"$match":{"text": {"$regex": "@\\w+"} }},
+     { "$unwind" : "$user" },
+     { "$sort": {"tweets": -1}},
+     { "$limit" : 10 }],
+     function(err,data){
+     if(err){console.log(err); return;}
+     console.log(data);
+     });*/
+
 }
 
 
